@@ -2,5 +2,11 @@
   "tasks": {
     "dev": "deno run --unstable --watch -A src/main.ts",
     "start": "deno run --unstable -A src/main.ts"
+  },
+  "deploy": {
+    "project": "12f75562-c447-4478-bf12-965b458dfa32",
+    "exclude": [],
+    "include": [],
+    "entrypoint": "src/main.ts"
   }
 }

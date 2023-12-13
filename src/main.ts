@@ -13,7 +13,7 @@ loadEnv();
 const schedule = _schedule as Schedule;
 const settings = _settings as Settings;
 
-Deno.cron("Update slack status", "*/10 * * * *", async () => {
+Deno.cron("Update slack status", "*/5 * * * *", async () => {
   const now = new Date();
 
   const status = getStatus(now, schedule, settings);
@@ -22,4 +22,6 @@ Deno.cron("Update slack status", "*/10 * * * *", async () => {
   await setPresenceMode(status.active);
 
   await updateStatus(status);
+
+  console.log("Updated status to ", status);
 });
