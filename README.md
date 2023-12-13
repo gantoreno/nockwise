@@ -8,6 +8,12 @@ A lightweight [Clockwise](https://www.getclockwise.com/home) alternative, built
 & deployed with [Deno](https://deno.com/) using
 [Deno crons](https://deno.com/blog/cron).
 
+> [!WARNING]
+> Knockwise is a **very hacky** utility and **not recommended** for other usages
+> other than experimental ones. Be mindful before setting it up and
+> tying it up to you account, as the consequences or ban risks from Slack are
+> still unclear.
+
 ## Why a Clockwise knock-off?
 
 Nockwise allows you to get the basic Clockwise features without having to create
