@@ -20,10 +20,10 @@ Deno.cron("Update slack status", "*/5 * * * *", async () => {
 
   const status = getStatus(now, schedule, settings);
 
+  await updateStatus(status);
+
   await setSnoozeMode(status.snooze);
   await setPresenceMode(status.active);
-
-  await updateStatus(status);
 
   console.log("Updated status to ", status);
 });
