@@ -1,0 +1,33 @@
+[
+  {
+    "type": "weekend"
+  },
+  {
+    "type": "weekday",
+    "start": 9,
+    "end": 17
+  },
+  {
+    "type": "weekday",
+    "start": 9,
+    "end": 17
+  },
+  {
+    "type": "weekday",
+    "start": 16,
+    "end": 17
+  },
+  {
+    "type": "weekday",
+    "start": 9,
+    "end": 17
+  },
+  {
+    "type": "weekday",
+    "start": 9,
+    "end": 17
+  },
+  {
+    "type": "weekend"
+  }
+]

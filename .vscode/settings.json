@@ -1,0 +1,9 @@
+{
+  // Deno
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+
+  // Biome
+  "editor.defaultFormatter": "denoland.vscode-deno"
+}
