@@ -7,7 +7,7 @@ import {
   WEEKEND,
 } from "../constants/status.ts";
 
-import type { Schedule, Settings, Status } from "../types/index.ts";
+import type { Schedule, Settings, Status, WorkDay } from "../types/index.ts";
 
 export function getStatus(
   now: Date,
@@ -21,14 +21,12 @@ export function getStatus(
 
   const currentSchedule = schedule[currentDay];
 
-  if (currentSchedule.type === "weekend") {
-    return WEEKEND;
-  }
-
   switch (true) {
-    case currentHour < currentSchedule.start:
+    case currentSchedule.type === "weekend":
+      return WEEKEND;
+    case currentHour < (currentSchedule as WorkDay).start:
       return BEFORE_HOURS;
-    case currentHour >= currentSchedule.end:
+    case currentHour >= (currentSchedule as WorkDay).end:
       return AFTER_HOURS;
     default:
       return DEFAULT;
