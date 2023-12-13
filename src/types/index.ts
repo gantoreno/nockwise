@@ -1,5 +1,5 @@
 export type Settings = {
-  timezone?: string;
+  timezone: string;
 };
 
 export type WorkDay = {

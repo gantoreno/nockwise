@@ -6,6 +6,7 @@
       "npm:date-fns-tz@2.0.0": "npm:date-fns-tz@2.0.0_date-fns@2.22.1",
       "npm:date-fns@2.22.1": "npm:date-fns@2.22.1",
       "npm:dotenv@16.3.1": "npm:dotenv@16.3.1",
+      "npm:moment-timezone@0.5.43": "npm:moment-timezone@0.5.43",
       "npm:zod@3.22.4": "npm:zod@3.22.4"
     },
     "npm": {
@@ -66,6 +67,16 @@
         "dependencies": {
           "mime-db": "mime-db@1.52.0"
         }
+      },
+      "moment-timezone@0.5.43": {
+        "integrity": "sha512-72j3aNyuIsDxdF1i7CEgV2FfxM1r6aaqJyLB2vwb33mXYyoyLly+F1zbWqhA3/bVIoJ4szlUoMbUnVdid32NUQ==",
+        "dependencies": {
+          "moment": "moment@2.29.4"
+        }
+      },
+      "moment@2.29.4": {
+        "integrity": "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==",
+        "dependencies": {}
       },
       "proxy-from-env@1.1.0": {
         "integrity": "sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==",
