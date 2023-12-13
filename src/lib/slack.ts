@@ -67,7 +67,6 @@ export async function setPresenceMode(active: boolean): Promise<Response> {
     "token",
     Deno.env.get("SLACK_TOKEN")!,
   );
-
   formData.append(
     "presence",
     active ? "active" : "away",
