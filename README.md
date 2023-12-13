@@ -88,6 +88,7 @@ $ deployctl deploy --prod --project=<give-it-a-name> src/main.ts
 ```
 
 It'll ask you to authenticate on the Deno site, so make sure to create an
-account there as well.
+account there as well. Make sure to keep the `ENABLED` environment flag as
+`true`.
 
 Happy hacking! 🎉
