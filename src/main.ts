@@ -25,5 +25,5 @@ Deno.cron("Update slack status", "*/5 * * * *", async () => {
   await setSnoozeMode(status.snooze);
   await setPresenceMode(status.active);
 
-  console.log("Updated status to ", status);
+  console.log("Updated status to", status);
 });
