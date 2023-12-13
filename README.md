@@ -5,7 +5,8 @@
 # Nockwise
 
 A lightweight [Clockwise](https://www.getclockwise.com/home) alternative, built
-& deployed with [Deno](https://deno.com/).
+& deployed with [Deno](https://deno.com/) using
+[Deno crons](https://deno.com/blog/cron).
 
 ## Why a Clockwise knock-off?
 
@@ -71,10 +72,9 @@ gathered before. Make sure to enclose the values with double quotes (").
 At this point, you can open `schedule.json` and modify it to match your schedule
 and/or work days/hours.
 
-> [!NOTE]
-> Keep in mind that the array must **always** contain 7 objects,
-> `start` must **always** be smaller than `end` (both being positive integers
-> between 0 and 23), and the first & last items are always Sunday, and Saturday,
+> [!NOTE] Keep in mind that the array must **always** contain 7 objects, `start`
+> must **always** be smaller than `end` (both being positive integers between 0
+> and 23), and the first & last items are always Sunday, and Saturday,
 > accordingly. This is in order to match the general date interpretation (where
 > weeks start on Sunday as day `0`, and end with Saturday as day `7`).
 
