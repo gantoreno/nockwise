@@ -1,5 +1,7 @@
 import { config as loadEnv } from "npm:dotenv@16.3.1";
 
+import { ENABLED } from "./constants/env.ts";
+
 import { getStatus } from "./lib/status.ts";
 import { setPresenceMode, setSnoozeMode, updateStatus } from "./lib/slack.ts";
 
@@ -14,7 +16,7 @@ const schedule = _schedule as Schedule;
 const settings = _settings as Settings;
 
 Deno.cron("Update slack status", "*/30 * * * *", async () => {
-  if (!Deno.env.get("ENABLED")) return;
+  if (!ENABLED) return;
 
   const now = new Date();
 
