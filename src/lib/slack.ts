@@ -1,5 +1,7 @@
 import axios from "npm:axios@1.6.2";
 
+import { SLACK_COOKIE, SLACK_TOKEN, SLACK_URL } from "../constants/env.ts";
+
 import type { Status } from "../types/index.ts";
 
 export async function updateStatus(status: Status): Promise<Response> {
@@ -7,7 +9,7 @@ export async function updateStatus(status: Status): Promise<Response> {
 
   formData.append(
     "token",
-    Deno.env.get("SLACK_TOKEN")!,
+    SLACK_TOKEN!,
   );
   formData.append(
     "profile",
@@ -20,11 +22,11 @@ export async function updateStatus(status: Status): Promise<Response> {
   );
 
   const res = await axios.post(
-    Deno.env.get("SLACK_URL")! + "/users.profile.set",
+    SLACK_URL! + "/users.profile.set",
     formData,
     {
       headers: {
-        Cookie: Deno.env.get("SLACK_COOKIE"),
+        Cookie: SLACK_COOKIE,
       },
     },
   );
@@ -37,7 +39,7 @@ export async function setSnoozeMode(snooze: boolean): Promise<Response> {
 
   formData.append(
     "token",
-    Deno.env.get("SLACK_TOKEN")!,
+    SLACK_TOKEN!,
   );
 
   if (snooze) {
@@ -48,11 +50,11 @@ export async function setSnoozeMode(snooze: boolean): Promise<Response> {
   }
 
   const res = await axios.post(
-    Deno.env.get("SLACK_URL")! + (snooze ? "/dnd.setSnooze" : "/dnd.endSnooze"),
+    SLACK_URL! + (snooze ? "/dnd.setSnooze" : "/dnd.endSnooze"),
     formData,
     {
       headers: {
-        Cookie: Deno.env.get("SLACK_COOKIE"),
+        Cookie: SLACK_COOKIE,
       },
     },
   );
@@ -65,7 +67,7 @@ export async function setPresenceMode(active: boolean): Promise<Response> {
 
   formData.append(
     "token",
-    Deno.env.get("SLACK_TOKEN")!,
+    SLACK_TOKEN!,
   );
   formData.append(
     "presence",
@@ -73,11 +75,11 @@ export async function setPresenceMode(active: boolean): Promise<Response> {
   );
 
   const res = await axios.post(
-    Deno.env.get("SLACK_URL")! + "/presence.set",
+    SLACK_URL! + "/presence.set",
     formData,
     {
       headers: {
-        Cookie: Deno.env.get("SLACK_COOKIE"),
+        Cookie: SLACK_COOKIE,
       },
     },
   );
