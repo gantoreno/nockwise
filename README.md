@@ -9,7 +9,7 @@ A lightweight [Clockwise](https://www.getclockwise.com/home) alternative, built
 [Deno crons](https://deno.com/blog/cron).
 
 > [!WARNING]
-> Knockwise is a **very hacky** utility and **not recommended** for other usages
+> Nockwise is a **very hacky** utility and **not recommended** for other usages
 > other than experimental ones. Be mindful before setting it up and
 > tying it up to you account, as the consequences or ban risks from Slack are
 > still unclear.
