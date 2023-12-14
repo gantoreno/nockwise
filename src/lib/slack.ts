@@ -43,7 +43,7 @@ export async function setSnoozeMode(snooze: boolean): Promise<Response> {
   if (snooze) {
     formData.append(
       "num_minutes",
-      "5",
+      "30",
     );
   }
 
