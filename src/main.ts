@@ -16,7 +16,7 @@ const schedule = _schedule as Schedule;
 const settings = _settings as Settings;
 
 Deno.cron("Update slack status", "*/30 * * * *", async () => {
-  if (!ENABLED) return;
+  if (!ENABLED) Deno.exit();
 
   const now = new Date();
 
